@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DevBuild.Assessment4_Question2 {
     class Square : Shape {
-        private float _side;
+        private float _side = 0.0f;
 
         public float SideValue {
             get => _side;
