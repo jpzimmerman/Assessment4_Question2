@@ -6,25 +6,19 @@ using System.Threading.Tasks;
 
 namespace DevBuild.Assessment4_Question2 {
     class Square : Shape {
-        private float Side;
+        private float _side;
 
         public float SideValue {
-            get { return Side; }
-            set { Side = value; }
+            get => _side;
+            set => _side = value;
         }
 
-        public Square() : base() {
-            Side = 0.0f;
-        }
+        public Square() : base()  => _side = 0.0f;
 
-        public Square(float sideLength) : base() {
-            Side = sideLength;
-        }
+        public Square(float sideLength) : base() =>_side = sideLength;
 
-        public override void Draw() {
-            Console.WriteLine("Hi, I am a square!");
-        }
+        public override void Draw() => Console.WriteLine("Hi, I am a square!");
 
-        public override float GetArea() => Side * Side;
+        public override float GetArea() => _side * _side;
     }
 }
